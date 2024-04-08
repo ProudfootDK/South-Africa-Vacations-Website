@@ -1,0 +1,15 @@
+form {
+    padding: 10px;
+}
+#divSubMeatSelect {
+    display:none;
+}
+#divSubCheckbox {
+    display:none;
+}
+#divBurgerCheckbox {
+    display:none;
+}
+#divGenericFormFields {
+    display:none;
+}

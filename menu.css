@@ -1,0 +1,37 @@
+:root {
+    --menu-color: #f47068;
+}
+.menu {
+    padding: 0;
+    list-style: none;
+    position: relative;
+    margin: 30px auto;
+    width: 70%;
+    height: 0;
+    padding-top: 70%;
+}
+.menu li {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    clip-path: url(#sector);
+
+    &:hover {
+        background-color: gold;
+    }
+}
+.about {
+    background-color: var(--menu-color);
+    transform: rotate(-30deg);
+}
+.bookings {
+    background-color: var(--menu-color);
+    transform: rotate(30deg);
+}
+.attractions {
+    background-color: var(--menu-color);
+    transform: rotate(90deg);
+}
