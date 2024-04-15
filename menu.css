@@ -92,6 +92,7 @@
     font-family: "Oswald", sans-serif;
     font-weight: bold;
     font-size: 80px;
+    pointer-events: none;
 }
 .menu-heading-2 {
     position: absolute;
@@ -101,6 +102,7 @@
     font-family: "Oswald", sans-serif;
     font-weight: bold;
     font-size: 80px;
+    pointer-events: none;
 }
 .menu-heading-3 {
     position: absolute;
@@ -110,6 +112,7 @@
     font-family: "Oswald", sans-serif;
     font-weight: bold;
     font-size: 80px;
+    pointer-events: none;
 }
 .menu-circular li {
     position: absolute;
