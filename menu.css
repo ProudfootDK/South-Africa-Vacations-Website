@@ -1,5 +1,6 @@
 :root {
-    --menu-color: #f47068;
+    --menu-color: #ff8100;
+    --menu-rotation: -30deg;
 }
 .menu-background {
     padding: 0;
@@ -67,6 +68,10 @@
         padding: 0;
         margin-left: -115px;
     }
+    .sun {
+        width: 230px;
+        height: 230px;
+    }
 }
 @media (min-width: 320px) and (max-width: 700px) {
     .menu-circular {
@@ -74,6 +79,10 @@
         height: 300px;
         padding: 0;
         margin-left: -150px;
+    }
+    .sun {
+        width: 300px;
+        height: 300px;
     }
 }
 @media all and (min-width: 700px) {
@@ -83,8 +92,14 @@
         padding: 0;
         margin-left: -200px;
     }
+    .sun {
+        width: 400px;
+        height: 400px;
+    }
 }
 .menu-heading-1 {
+    animation:  1s ease-out 7s 1 textFadeIn;
+    animation-fill-mode: forwards;
     position: absolute;
     left: 60%;
     top: -75%;
@@ -93,6 +108,7 @@
     font-weight: bold;
     font-size: 80px;
     pointer-events: none;
+    opacity: 0;
 }
 .menu-heading-2 {
     position: absolute;
@@ -128,14 +144,23 @@
     }
 }
 .menu-about {
+    --menu-rotation: -30deg;
+    animation:  1s ease-out 7s 1 rotateIn;
+    animation-fill-mode: backwards;
     background-color: var(--menu-color);
     transform: rotate(-30deg);
 }
 .menu-bookings {
+    --menu-rotation: 30deg;
+    animation:  1s ease-out 7s 1 rotateIn;
+    animation-fill-mode: backwards;
     background-color: var(--menu-color);
     transform: rotate(30deg);
 }
 .menu-attractions {
+    --menu-rotation: 90deg;
+    animation:  1s ease-out 7s 1 rotateIn;
+    animation-fill-mode: backwards;
     background-color: var(--menu-color);
     transform: rotate(90deg);
 }
@@ -145,9 +170,70 @@
     position: absolute;
     object-fit: cover;
     z-index: 0;
+    transform: rotate(-30deg);
     filter: brightness(50%);
 
     &:hover {
         filter: brightness(100%);
     }
+}
+@keyframes sunrise {
+    0% {
+        transform: translate(-50%, -10%);
+    }
+    100% {
+        transform: translate(-50%, -56%);
+    }
+}
+@keyframes slideLeft {
+     0% {
+         transform: translate(-50%, -56%);
+     }
+     100% {
+         transform: translate(calc(-50vw + -50%), -56%);
+     }
+ }
+@keyframes rotateIn {
+    0% {
+        transform: rotate(-90deg);
+    }
+    100% {
+        transform: rotate(var(--menu-rotation));
+    }
+}
+@keyframes textFadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.sun {
+    animation:  5s ease-out 0s 1 sunrise,
+                2s ease-out 5s 1 slideLeft;
+    animation-fill-mode: forwards;
+
+    position: absolute;
+    top: 56%;
+    left: 50%;
+    transform: translate(-50%, 100%);
+    background-color: var(--menu-color);
+    border-radius: 50%;
+    display: inline-block;
+}
+.horizon {
+    position:absolute;
+    top: 50%;
+    height: 50vh;
+    width: 100vw;
+    background-color: black;
+    display: inline-block;
+}
+.sky {
+    position:absolute;
+    height: 100vh;
+    width: 100vw;
+    background-color: lightskyblue;
+    display: inline-block;
 }
