@@ -6,5 +6,124 @@
 </head>
 <body>
     <h1>Bookings</h1>
+
+    <div class="container">
+        <!Primary Form>
+        <form class="border border-secondary-subtle border-2 rounded-2" method="post">
+
+            <!Dropdown Menu (Subs/Burgers)>
+            <div class="dropdown">
+                <select class="btn btn-secondary" name="sandwichDropdown" id="sandwichDropdown" onchange="updateForm()" aria-label="Please Choose a Sandwich">
+                    <option selected>Are you booking a Tour or a Room?</option>
+                    <option value="burger">Room</option>
+                    <option value="sub">Tour</option>
+                </select>
+            </div><br>
+
+            <!Radio Buttons for Sub Meat selection>
+            <div id="divSubMeatSelect">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioButtons" id="flexRadioBeef" checked>
+                    <label class="form-check-label" for="flexRadioBeef">Lion Safari</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioButtons" id="flexRadioChicken">
+                    <label class="form-check-label" for="flexRadioChicken">Elephant Safari</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioButtons" id="flexRadioSalami">
+                    <label class="form-check-label" for="flexRadioSalami">Giraffe Safari</label>
+                </div>
+            </div>
+
+            <!Checkboxes for Sub options>
+            <div id="divSubCheckbox">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckToasted">
+                    <label class="form-check-label" for="flexCheckToasted">I am bringing my own lunch</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckCut">
+                    <label class="form-check-label" for="flexCheckCut">I would like to purchase lunch (USD 40 surcharge)</label>
+                </div><br>
+            </div>
+
+            <!Checkbox for Burger Option>
+            <div id="divBurgerCheckbox">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckToastedBun">
+                    <label class="form-check-label" for="flexCheckToastedBun">Early Check-in</label>
+                </div><br>
+            </div>
+
+            <!Generic fields for both Sub and Burger>
+            <div id="divGenericFormFields">
+
+                <!Toppings multiple selector>
+                <div class="mb-3">
+                    <select class="form-select" multiple aria-label="Allergens:">
+                        <option value="lettuce">Shellfish</option>
+                        <option value="tomato">Tree Nuts</option>
+                        <option value="onion">Peanuts</option>
+                        <option value="cheese">Soy</option>
+                    </select>
+                    <div id="multiSelectHelp" class="form-text">Hold Control or Command to select multiple toppings.</div>
+                </div>
+
+                <!Customer name, email, password and comment fields>
+                <div class="mb-3">
+                    <label for="inputName" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="inputName">
+                </div>
+                <div class="mb-3">
+                    <label for="inputEmail" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="inputPassword" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="inputPassword">
+                </div>
+                <div class="mb-3">
+                    <label for="inputComment" class="form-label">Comments</label>
+                    <textarea class="form-control" id="inputComment" rows="3"></textarea>
+                </div>
+
+                <!Submit Button>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function updateForm() {
+            let sandwichDropdown  =  document.getElementById("sandwichDropdown");
+            let sandwichValue = sandwichDropdown.options[sandwichDropdown.selectedIndex].value;
+            let divSubMeatSelect =  document.getElementById("divSubMeatSelect");
+            let divSubCheckBox =  document.getElementById("divSubCheckbox");
+            let divBurgerCheckbox = document.getElementById("divBurgerCheckbox")
+            let divGenericFormFields = document.getElementById("divGenericFormFields")
+
+            if (sandwichValue === "burger") {
+                divSubMeatSelect.style.display = "none";
+                divSubCheckBox.style.display = "none";
+                divBurgerCheckbox.style.display = "block";
+                divGenericFormFields.style.display = "block";
+
+            }
+            else if (sandwichValue === "sub") {
+                divSubMeatSelect.style.display = "block";
+                divSubCheckBox.style.display = "block";
+                divBurgerCheckbox.style.display = "none";
+                divGenericFormFields.style.display = "block";
+            }
+            else {
+                divSubMeatSelect.style.display = "none"
+                divSubCheckBox.style.display = "none";
+                divBurgerCheckbox.style.display = "none";
+                divGenericFormFields.style.display = "none";
+            }
+        }
+    </script>
+
 </body>
 </html>
