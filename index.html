@@ -13,13 +13,19 @@
 
     <ul class="menu-background">
         <a href="./about.html">
-            <li class="menu-about"></li>
+            <li class="menu-about">
+                <video class="video" muted loop><source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4" /></video>
+            </li>
         </a>
         <a href="./bookings.html">
-            <li class="menu-bookings"></li>
+            <li class="menu-bookings">
+                <video class="video" muted loop><source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4" /></video>
+            </li>
         </a>
         <a href="./attractions.html">
-            <li class="menu-attractions"></li>
+            <li class="menu-attractions">
+                <video class="video" muted loop><source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4" /></video>
+            </li>
         </a>
     </ul>
 
@@ -47,6 +53,18 @@
     </svg>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+        let videoArray = document.querySelectorAll(".video");
+
+        videoArray.forEach(function(video) {
+            video.addEventListener("mouseover", function() {
+                video.play();
+            });
+            video.addEventListener("mouseout", function() {
+                video.pause();
+            });
+        });
+    </script>
 
 </body>
 </html>
