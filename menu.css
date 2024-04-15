@@ -12,7 +12,23 @@
     height: 0;
 
 }
-@media all {
+@media all and (max-width: 260px){
+    .menu-background {
+        width: 800vw;
+        height: 800vw;
+        padding: 0;
+        margin-left: -400vw;
+    }
+}
+@media (min-width: 260px) and (max-width: 600px) {
+    .menu-background {
+        width: 400vw;
+        height: 400vw;
+        padding: 0;
+        margin-left: -200vw;
+    }
+}
+@media all and (min-width: 600px){
     .menu-background {
         width: 250vw;
         height: 250vw;
