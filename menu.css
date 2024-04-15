@@ -84,6 +84,33 @@
         margin-left: -200px;
     }
 }
+.menu-heading-1 {
+    position: absolute;
+    left: 60%;
+    top: -75%;
+    color: black;
+    font-family: "Oswald", sans-serif;
+    font-weight: bold;
+    font-size: 80px;
+}
+.menu-heading-2 {
+    position: absolute;
+    left: 150%;
+    top: 35%;
+    color: black;
+    font-family: "Oswald", sans-serif;
+    font-weight: bold;
+    font-size: 80px;
+}
+.menu-heading-3 {
+    position: absolute;
+    left: 60%;
+    top: 125%;
+    color: black;
+    font-family: "Oswald", sans-serif;
+    font-weight: bold;
+    font-size: 80px;
+}
 .menu-circular li {
     position: absolute;
     top: 0;
