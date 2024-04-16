@@ -6,43 +6,43 @@
     "season": "Summer"
   },
   {
-    "image": "./ele.jpeg",
+    "image": "./Images/elephant.webp",
     "title": "Elephant Safari",
     "description": "Explore the untamed wilderness of South Africa with our thrilling Elephant Safari adventure! Experience the grace and power of the African elephant as you observe these gentle giants in their natural habitat.",
     "season": "Summer"
   },
   {
-    "image": "./image.png",
+    "image": "./Images/leopard.jpg",
     "title": "Leopard Encounter",
     "description": "Venture into the heart of the bushveld and encounter the elusive leopard. Known for its stealth and beauty, the leopard prowls through the African landscapes, offering glimpses of its majestic presence.",
     "season": "Summer"
   },
   {
-    "image": "./image.png",
+    "image": "./Images/meerkat.webp",
     "title": "Meerkat Discovery",
     "description": "Join us on a journey to discover the playful antics of the mischievous meerkats. Watch as they forage and socialize in the sun-drenched landscapes of South Africa, providing delightful moments of entertainment and fascination.",
     "season": "Summer"
   },
   {
-    "image": "./image.png",
+    "image": "./Images/winelands.jpg",
     "title": "Cape Winelands Tour",
     "description": "Indulge in a sensory journey through the picturesque Cape Winelands. Explore historic vineyards, sample world-class wines, and savor gourmet cuisine against the backdrop of breathtaking mountain landscapes.",
     "season": "March - November"
   },
   {
-    "image": "./image.png",
+    "image": "./Images/tablemountain.webp",
     "title": "Table Mountain Hike",
     "description": "Ascend to new heights with a thrilling hike up Table Mountain. Marvel at panoramic views of Cape Town and its surrounding coastline as you conquer one of the New Seven Wonders of Nature.",
     "season": "All Season"
   },
   {
-    "image": "./image.png",
+    "image": "./Images/safari.jpg",
     "title": "Big Five Safari",
     "description": "Embark on an unforgettable Big Five Safari adventure in South Africa's renowned game reserves. Encounter lions, elephants, rhinos, buffaloes, and leopards in their natural habitat, guided by expert rangers.",
     "season": "Summer"
   },
   {
-    "image": "./image.png",
+    "image": "./Images/robbenisland.webp",
     "title": "Robben Island Tour",
     "description": "Step back in time with a poignant visit to Robben Island, a UNESCO World Heritage Site. Explore the former prison where Nelson Mandela was incarcerated and gain insight into South Africa's struggle for freedom and democracy.",
     "season": "Spring/Fall"
