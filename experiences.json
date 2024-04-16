@@ -1,12 +1,12 @@
 [
   {
-    "image": "./image.png",
+    "image": "./Images/lion.jpg",
     "title": "Lion Safari",
     "description": "Embark on an exciting Lion Safari adventure! Witness these majestic creatures in their natural habitat as you journey through the savannah.",
     "season": "Summer"
   },
   {
-    "image": "./image.png",
+    "image": "./ele.jpeg",
     "title": "Elephant Safari",
     "description": "Explore the untamed wilderness of South Africa with our thrilling Elephant Safari adventure! Experience the grace and power of the African elephant as you observe these gentle giants in their natural habitat.",
     "season": "Summer"
