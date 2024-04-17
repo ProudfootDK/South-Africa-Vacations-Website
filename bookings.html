@@ -42,7 +42,7 @@
 
                 <div class="col">
                     <div class="card shadow-sm">
-                         <img src="./Images/lion.jpg" class="card-img-top" alt="Two lions with a safari vehicle in the background">
+                         <img src="" class="card-img-top img-fluid" style="object-fit: cover; aspect-ratio: 1.5;">
                          <div class="card-body">
                             <h5 class="card-title">Card title</h5>
                             <p class="card-text">Card text</p>
@@ -50,7 +50,7 @@
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-sm btn-success">Book</button>
                                 </div>
-                                <small id="card-season" class="text-body-secondary">season</small>
+                                <small class="card-season text-body-secondary">season1</small>
                             </div>
                         </div>
                     </div>
@@ -86,10 +86,10 @@
                 let expCard = "";
 
                 for (let i = 0; i < EXPERIENCES.length; i++) {
-                    //expContainerRow.getElementsByClassName("card-img-top")[0].innerText = EXPERIENCES[i].image;
+                    expContainerRow.getElementsByClassName("card-img-top")[0].src = EXPERIENCES[i].image;
                     expContainerRow.getElementsByClassName("card-title")[0].innerText = EXPERIENCES[i].title;
                     expContainerRow.getElementsByClassName("card-text")[0].innerText = EXPERIENCES[i].description;
-                    expContainerRow.getElementById("card-season")[0].innerText = EXPERIENCES[i].season;
+                    expContainerRow.getElementsByClassName("card-season")[0].innerText = EXPERIENCES[i].season;
 
                     expCard += expContainerRow.innerHTML;
                 }
